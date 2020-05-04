@@ -5,9 +5,15 @@ const dotenv = require('dotenv');
 //load env vars
 dotenv.config({path:'./config/config.env'});
 
+//route files
+const bootcamps = require('./routes/bootcamp');
 //init server 
 
 const app = express();
+
+//route define
+
+app.use('/api/v1/bootcamps', bootcamps);
 
 const PORT = process.env.PORT || 5000;
 
