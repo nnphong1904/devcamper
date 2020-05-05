@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   res.status(200).json({success:true, msg:'creat a new bootcamp'});
+  console.log(req.body);
 }); 
 
 router.put('/:id', (req, res) => {
